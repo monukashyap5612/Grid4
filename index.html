@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gradient Grid Layout</title>
+    <style>
+        body {
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #f0f0f0;
+        }
+
+        .container {
+            display: grid;
+            grid-template-areas:
+                "box1 box2 box3"
+                "box4 box4 box4"
+                "box5 box6 box7"
+                "box8 box8 box8";
+            grid-template-columns: repeat(3, 1fr);
+            grid-gap: 10px;
+            width: 90%;
+            max-width: 1200px;
+        }
+
+        .box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            font-size: 18px;
+            height: 120px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .box1 { grid-area: box1; background: linear-gradient(to right, #ff7eb3, #ff758c); }
+        .box2 { grid-area: box2; background: linear-gradient(to right, #717cff, #3c61ff); }
+        .box3 { grid-area: box3; background: linear-gradient(to right, #7dffb3, #4cffa6); }
+        .box4 { grid-area: box4; background: linear-gradient(to right, #ffdb70, #ffb647); }
+        .box5 { grid-area: box5; background: linear-gradient(to right, #ff758c, #ff4971); }
+        .box6 { grid-area: box6; background: linear-gradient(to right, #717cff, #3c61ff); }
+        .box7 { grid-area: box7; background: linear-gradient(to right, #ff7eb3, #ff4971); }
+        .box8 { grid-area: box8; background: linear-gradient(to right, #7dffb3, #4cffa6); }
+
+        /* For inner elements (lines and circles) */
+        .line {
+            width: 40%;
+            height: 6px;
+            background: white;
+            border-radius: 3px;
+            margin: 5px 0;
+        }
+
+        .circle {
+            width: 15px;
+            height: 15px;
+            background: white;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box box1">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="box box2">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="box box3">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="box box4">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="box box5">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="box box6">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="box box7">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+        <div class="box box8">
+            <div class="line"></div>
+            <div class="circle"></div>
+        </div>
+    </div>
+</body>
+</html>
